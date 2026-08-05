@@ -1,7 +1,7 @@
 #!/bin/bash
 # ZipLoot Linux/macOS 1-Click Cloud Seedbox Setup
 echo "=============================================="
-echo "[ZipLoot] Cloud Seedbox Installer"
+echo "[ZipLoot] Unlimited High-Speed Torrent Downloader"
 echo "=============================================="
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
