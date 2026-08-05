@@ -126,6 +126,12 @@ function getHtmlDashboard() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZipLoot - Cloud Seedbox & Streamer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syne:wght@700;800&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://ziploot.app/posts/unlimited-cloud-seedbox.html" />
+  <meta property="og:title" content="ZipLoot Cloud Seedbox — High-Speed Cloud Torrent Streamer" />
+  <meta property="og:description" content="Free cloud seedbox by ZipLoot.app to download torrents via magnet links and stream media directly in the browser." />
+  <meta property="og:url" content="https://ziploot.app" />
+  <meta property="og:site_name" content="ZipLoot" />
+  <meta property="og:image" content="https://ziploot.app/images/cloud_seedbox_hero.png" />
   <style>
     :root {
       --bg: #0b0f19;
@@ -164,6 +170,7 @@ function getHtmlDashboard() {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       letter-spacing: -0.5px;
+      text-decoration: none;
     }
     .container {
       max-width: 1000px;
@@ -246,7 +253,10 @@ function getHtmlDashboard() {
 </head>
 <body>
   <header>
-    <div class="logo">⚡ ZIPLOOT SEEDBOX</div>
+    <a href="https://ziploot.app" target="_blank" class="logo">⚡ ZIPLOOT.APP SEEDBOX</a>
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <a href="https://ziploot.app" target="_blank" style="color: #818cf8; text-decoration: none; font-weight: 600; font-size: 14px; background: rgba(129, 140, 248, 0.1); padding: 8px 16px; border-radius: 50px; border: 1px solid rgba(129, 140, 248, 0.2);">🌐 Visit ZipLoot.app</a>
+    </div>
   </header>
   <div class="container">
     <!-- Add Torrent -->
@@ -264,6 +274,11 @@ function getHtmlDashboard() {
       </div>
     </div>
   </div>
+
+  <footer style="border-top: 1px solid var(--border); padding: 30px; text-align: center; margin-top: auto; font-size: 14px; color: #64748b; background: rgba(0,0,0,0.3);">
+    <p style="margin-bottom: 8px;">⚡ Powered by <a href="https://ziploot.app" target="_blank" style="color: #818cf8; text-decoration: underline; font-weight: 700;">ZipLoot.app</a> — Free Automated Web Tools &amp; Developer Utilities.</p>
+    <p style="font-size: 13px; color: #475569;">Explore more tools: <a href="https://ziploot.app/addfree" target="_blank" style="color: #10b981; text-decoration: none; margin: 0 5px;">Video Downloader</a> | <a href="https://ziploot.app/pdf-toolset" target="_blank" style="color: #10b981; text-decoration: none; margin: 0 5px;">PDF Toolset</a> | <a href="https://ziploot.app/url-shortener" target="_blank" style="color: #10b981; text-decoration: none; margin: 0 5px;">URL Shortener</a></p>
+  </footer>
 
   <script>
     async function addTorrent() {
@@ -300,17 +315,17 @@ function getHtmlDashboard() {
         
         let fileItems = "";
         t.files.forEach(f => {
-          fileItems += \`
+          fileItems += `
             <div class="file-item">
               <span>📁 \${f.name} (\${f.size} MB)</span>
               <div>
                 <a href="/stream/\${t.infoHash}/\${f.index}" target="_blank">Stream/Download</a>
               </div>
             </div>
-          \`;
+          `;
         });
 
-        item.innerHTML = \`
+        item.innerHTML = `
           <div class="torrent-header">
             <span class="torrent-title">⚡ \${t.name || 'Loading Metadata...'}</span>
             <button class="btn-delete" onclick="deleteTorrent('\${t.infoHash}')">Remove</button>
@@ -326,14 +341,14 @@ function getHtmlDashboard() {
           <div class="file-list">
             \${fileItems}
           </div>
-        \`;
+        `;
         listDiv.appendChild(item);
       });
     }
 
     async function deleteTorrent(infoHash) {
       if (confirm("Remove this torrent from cloud?")) {
-        await fetch(\`/api/delete/\${infoHash}\`, { method: "DELETE" });
+        await fetch(`/api/delete/\${infoHash}`, { method: "DELETE" });
         loadStatus();
       }
     }
