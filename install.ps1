@@ -16,7 +16,7 @@ try {
     Write-Host "[+] Running setup in: $projectFolder" -ForegroundColor Cyan
 
     # Ensure required files are present; download from GitHub if missing
-    $baseUrl = "https://raw.githubusercontent.com/Ziploot/unlimited-cloud-seedbox/main"
+    $baseUrl = "https://raw.githubusercontent.com/Ziplootapp/unlimited-cloud-seedbox/main"
     $requiredFiles = @("index.js", "package.json", "render.yaml", "README.md")
     foreach ($file in $requiredFiles) {
         $filePath = Join-Path $projectFolder $file
@@ -38,7 +38,7 @@ try {
 
     $openCloud = Read-Host "`n[INPUT] Do you want to open the 1-Click Render Deployment page now? (Y/N)"
     if ($openCloud -eq "Y" -or $openCloud -eq "y") {
-        Start-Process "https://render.com/deploy?repo=https://github.com/Ziploot/unlimited-cloud-seedbox"
+        Start-Process "https://render.com/deploy?repo=https://github.com/Ziplootapp/unlimited-cloud-seedbox"
     }
 
     Write-Host "`n==============================================" -ForegroundColor Green
