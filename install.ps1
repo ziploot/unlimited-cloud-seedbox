@@ -4,19 +4,27 @@ try {
     Write-Host "[ZipLoot] Cloud Seedbox Installer" -ForegroundColor Green
     Write-Host "==============================================" -ForegroundColor Green
 
-    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
-    $projectFolder = Join-Path $pwd "unlimited-cloud-seedbox-project"
-    if (Test-Path $projectFolder) {
-        Write-Host "[WARN] Folder 'unlimited-cloud-seedbox-project' already exists." -ForegroundColor Yellow
-    } else {
-        New-Item -ItemType Directory -Path $projectFolder -ErrorAction SilentlyContinue | Out-Null
+    # Determine script execution path safely
+    $projectFolder = $PSScriptRoot
+    if (-not $projectFolder) {
+        $projectFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition
+    }
+    if (-not $projectFolder) {
+        $projectFolder = Get-Location
     }
 
-    # Copy files
-    Copy-Item -Path "$scriptDir\index.js" -Destination "$projectFolder\index.js" -Force
-    Copy-Item -Path "$scriptDir\package.json" -Destination "$projectFolder\package.json" -Force
-    Copy-Item -Path "$scriptDir\render.yaml" -Destination "$projectFolder\render.yaml" -Force
-    Copy-Item -Path "$scriptDir\README.md" -Destination "$projectFolder\README.md" -Force
+    Write-Host "[+] Running setup in: $projectFolder" -ForegroundColor Cyan
+
+    # Ensure required files are present; download from GitHub if missing
+    $baseUrl = "https://raw.githubusercontent.com/Ziploot/unlimited-cloud-seedbox/main"
+    $requiredFiles = @("index.js", "package.json", "render.yaml", "README.md")
+    foreach ($file in $requiredFiles) {
+        $filePath = Join-Path $projectFolder $file
+        if (-not (Test-Path $filePath)) {
+            Write-Host "[+] Downloading missing file: $file ..." -ForegroundColor Yellow
+            Invoke-WebRequest -Uri "$baseUrl/$file" -OutFile $filePath -UseBasicParsing
+        }
+    }
 
     Set-Location $projectFolder
 
