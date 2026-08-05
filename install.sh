@@ -7,7 +7,7 @@ echo "=============================================="
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
 
-BASE_URL="https://raw.githubusercontent.com/Ziploot/unlimited-cloud-seedbox/main"
+BASE_URL="https://raw.githubusercontent.com/Ziplootapp/unlimited-cloud-seedbox/main"
 FILES=("index.js" "package.json" "render.yaml" "README.md")
 for FILE in "${FILES[@]}"; do
     if [ ! -f "$FILE" ]; then
@@ -29,9 +29,9 @@ echo ""
 read -p "[INPUT] Do you want to open the 1-Click Render Deployment page now? (y/n): " OPEN_CLOUD
 if [ "$OPEN_CLOUD" = "y" ] || [ "$OPEN_CLOUD" = "Y" ]; then
     if command -v xdg-open > /dev/null; then
-        xdg-open "https://render.com/deploy?repo=https://github.com/Ziploot/unlimited-cloud-seedbox"
+        xdg-open "https://render.com/deploy?repo=https://github.com/Ziplootapp/unlimited-cloud-seedbox"
     elif command -v open > /dev/null; then
-        open "https://render.com/deploy?repo=https://github.com/Ziploot/unlimited-cloud-seedbox"
+        open "https://render.com/deploy?repo=https://github.com/Ziplootapp/unlimited-cloud-seedbox"
     fi
 fi
 
