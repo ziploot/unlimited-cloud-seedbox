@@ -4,16 +4,17 @@ echo "=============================================="
 echo "[ZipLoot] Cloud Seedbox Installer"
 echo "=============================================="
 
-PROJECT_DIR="unlimited-cloud-seedbox-project"
-mkdir -p "$PROJECT_DIR"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "$SCRIPT_DIR"
 
-# Download files
-curl -sL "https://raw.githubusercontent.com/Ziploot/unlimited-cloud-seedbox/main/index.js" -o "$PROJECT_DIR/index.js"
-curl -sL "https://raw.githubusercontent.com/Ziploot/unlimited-cloud-seedbox/main/package.json" -o "$PROJECT_DIR/package.json"
-curl -sL "https://raw.githubusercontent.com/Ziploot/unlimited-cloud-seedbox/main/render.yaml" -o "$PROJECT_DIR/render.yaml"
-curl -sL "https://raw.githubusercontent.com/Ziploot/unlimited-cloud-seedbox/main/README.md" -o "$PROJECT_DIR/README.md"
-
-cd "$PROJECT_DIR"
+BASE_URL="https://raw.githubusercontent.com/Ziploot/unlimited-cloud-seedbox/main"
+FILES=("index.js" "package.json" "render.yaml" "README.md")
+for FILE in "${FILES[@]}"; do
+    if [ ! -f "$FILE" ]; then
+        echo "[+] Downloading missing file: $FILE ..."
+        curl -sL "$BASE_URL/$FILE" -o "$FILE"
+    fi
+done
 
 echo ""
 echo "=============================================="
@@ -56,6 +57,6 @@ if [ "$RUN_LOCAL" = "y" ] || [ "$RUN_LOCAL" = "Y" ]; then
     
     echo ""
     echo "[SUCCESS] Local Seedbox Server running in the background!"
-    echo "To start it manually later, run 'npm start' in: $PROJECT_DIR"
+    echo "To start it manually later, run 'npm start' in: $SCRIPT_DIR"
 fi
 echo ""
