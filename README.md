@@ -11,7 +11,7 @@ Host your private seedbox in the cloud for free ($0 Operational cost, zero maint
 
 1. Log into your **Render** account.
 2. Click the 1-Click deploy link:
-   👉 **[Deploy to Render](https://render.com/deploy?repo=https://github.com/Ziploot/unlimited-cloud-seedbox)**
+   👉 **[Deploy to Render](https://render.com/deploy?repo=https://github.com/Ziplootapp/unlimited-cloud-seedbox)**
 3. Name your service (e.g., `unlimited-cloud-seedbox`) and click **Create Web Service**.
 4. **Done!** Render will automatically build and start your container. Your private seedbox is ready!
 
@@ -27,5 +27,3 @@ To run the seedbox server locally on your machine:
    npm start
    ```
 3. Open `http://localhost:7860` in your browser.
-
- 
