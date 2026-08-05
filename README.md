@@ -40,14 +40,17 @@ To run the seedbox server locally on your machine:
 
 ---
 
+---
+
 ## 🌐 Discover More Free Tools on ZipLoot
 
 Check out our full suite of automated web applications and developer tools at **[https://ziploot.app](https://ziploot.app)**:
 
-- 🎬 **[Ad-Free Video Downloader](https://ziploot.app/addfree)** — Fast social video downloads with zero popups.
+- 🎥 **[Ad-Free Video Downloader](https://ziploot.app/addfree)** — Fast social video downloads with zero popups.
 - 📄 **[Unlimited PDF Toolset](https://ziploot.app/pdf-toolset)** — Merge, split, compress, and edit PDFs in browser.
-- 🖼️ **[AI Image Generator](https://ziploot.app/ai-image-generator)** — Generate stunning images from text prompts for free.
-- 🔗 **[URL Shortener](https://ziploot.app/url-shortener)** — Shorten and track link clicks instantly.
+- 📹 **[YouTube Downloader](https://ziploot.app/youtube-downloader)** — Download high quality YouTube videos and audio for free.
+- 🎨 **[Watermark Remover](https://ziploot.app/watermark-remover)** — Remove image watermarks automatically.
+- 🌐 **[Image Translator](https://ziploot.app/image-translator)** — Translate text inside images online instantly.
 
 ---
 
