@@ -1,6 +1,16 @@
-# Unlimited Private Cloud Seedbox ($0 Setup)
+# ⚡ Unlimited Private Cloud Seedbox ($0 Setup) by [ZipLoot.app](https://ziploot.app)
 
-A serverless cloud seedbox deployed on Render (Free Tier) that allows you to download torrents via magnet links at gigabit cloud speeds and stream video/audio directly in the browser.
+[![ZipLoot.app](https://img.shields.io/badge/Powered%20By-ZipLoot.app-818cf8?style=for-the-badge&logo=rocket)](https://ziploot.app)
+[![Deploy to Render](https://img.shields.io/badge/Deploy%20To-Render-10b981?style=for-the-badge&logo=render)](https://render.com/deploy?repo=https://github.com/Ziplootapp/unlimited-cloud-seedbox)
+
+A serverless cloud seedbox developed by **[ZipLoot.app](https://ziploot.app)** deployed on Render (Free Tier) that allows you to download torrents via magnet links at gigabit cloud speeds and stream video/audio directly in your web browser.
+
+---
+
+## ⚡ Key Features
+- **$0 Free Cloud Hosting**: 1-Click deployment via Render blueprint (`render.yaml`).
+- **Instant Browser Streaming**: Built-in HTTP range request streamer for MP4, MKV, and audio streaming.
+- **Powered by ZipLoot**: Maintained as part of the free web tools ecosystem at **[ziploot.app](https://ziploot.app)**.
 
 ---
 
@@ -27,3 +37,18 @@ To run the seedbox server locally on your machine:
    npm start
    ```
 3. Open `http://localhost:7860` in your browser.
+
+---
+
+## 🌐 Discover More Free Tools on ZipLoot
+
+Check out our full suite of automated web applications and developer tools at **[https://ziploot.app](https://ziploot.app)**:
+
+- 🎬 **[Ad-Free Video Downloader](https://ziploot.app/addfree)** — Fast social video downloads with zero popups.
+- 📄 **[Unlimited PDF Toolset](https://ziploot.app/pdf-toolset)** — Merge, split, compress, and edit PDFs in browser.
+- 🖼️ **[AI Image Generator](https://ziploot.app/ai-image-generator)** — Generate stunning images from text prompts for free.
+- 🔗 **[URL Shortener](https://ziploot.app/url-shortener)** — Shorten and track link clicks instantly.
+
+---
+
+*Maintained with ❤️ by the **[ZipLoot Team](https://ziploot.app)**.*
