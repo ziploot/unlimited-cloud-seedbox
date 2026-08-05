@@ -1,9 +1,9 @@
-# ⚡ Unlimited Private Cloud Seedbox ($0 Setup) by [ZipLoot.app](https://ziploot.app)
+# ⚡ Unlimited High-Speed Cloud Torrent Downloader & Streamer ($0 Setup) — [ZipLoot.app](https://ziploot.app)
 
 [![ZipLoot.app](https://img.shields.io/badge/Powered%20By-ZipLoot.app-818cf8?style=for-the-badge&logo=rocket)](https://ziploot.app)
 [![Deploy to Render](https://img.shields.io/badge/Deploy%20To-Render-10b981?style=for-the-badge&logo=render)](https://render.com/deploy?repo=https://github.com/Ziplootapp/unlimited-cloud-seedbox)
 
-A serverless cloud seedbox developed by **[ZipLoot.app](https://ziploot.app)** deployed on Render (Free Tier) that allows you to download torrents via magnet links at gigabit cloud speeds and stream video/audio directly in your web browser.
+A high-speed serverless cloud torrent downloader developed by **[ZipLoot.app](https://ziploot.app)** deployed on Render (Free Tier) that allows you to download torrents via magnet links at gigabit cloud speeds and stream video/audio directly in your web browser.
 
 ---
 
