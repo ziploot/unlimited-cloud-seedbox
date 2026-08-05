@@ -1,7 +1,7 @@
 # ZipLoot Windows 1-Click Cloud Seedbox Setup
 try {
     Write-Host "==============================================" -ForegroundColor Green
-    Write-Host "[ZipLoot] Cloud Seedbox Installer" -ForegroundColor Green
+    Write-Host "[ZipLoot] Unlimited High-Speed Torrent Downloader" -ForegroundColor Green
     Write-Host "==============================================" -ForegroundColor Green
 
     # Determine script execution path safely
