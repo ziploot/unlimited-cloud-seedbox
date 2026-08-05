@@ -124,10 +124,10 @@ function getHtmlDashboard() {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZipLoot — Unlimited High-Speed Cloud Torrent Downloader &amp; Streamer</title>
+  <title>ZipLoot — Unlimited High-Speed Cloud Torrent Downloader & Streamer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syne:wght@700;800&family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://ziploot.app/posts/unlimited-cloud-seedbox.html" />
-  <meta property="og:title" content="ZipLoot — Unlimited High-Speed Cloud Torrent Downloader &amp; Streamer" />
+  <meta property="og:title" content="ZipLoot — Unlimited High-Speed Cloud Torrent Downloader & Streamer" />
   <meta property="og:description" content="Free cloud seedbox by ZipLoot.app to download torrents via magnet links and stream media directly in the browser." />
   <meta property="og:url" content="https://ziploot.app" />
   <meta property="og:site_name" content="ZipLoot" />
